@@ -19,10 +19,10 @@ def postorder(node):
 
 
 def make_tree(tree):
-    turn = int(input("입력할 노드의 개수를 입력하세요 : "))
+    turn = int(input())
     
     for _ in range(turn):
-        data = input("노드와 왼쪽/오른쪽 자식을 입력하세요: ").split()
+        data = input().split()
         node = data[0]
         left = data[1] if data[1] != '.' else None
         right = data[2] if data[2] != '.' else None
@@ -38,14 +38,14 @@ tree['F'] = [None, 'G']
 tree['D'] = [None, None]
 tree['G'] = [None, None]
 
-print("\n• 전위 순회한 결과 : ", end='')
+print("전위 순회한 결과 : ", end='')
 preorder('A')
 print()
 
-print("• 중위 순회한 결과 : ", end='')
+print("중위 순회한 결과 : ", end='')
 inorder('A')
 print()
 
-print("• 후위 순회한 결과 : ", end='')
+print("후위 순회한 결과 : ", end='')
 postorder('A')
 print()
